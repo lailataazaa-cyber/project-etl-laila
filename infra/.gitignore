@@ -5,4 +5,5 @@
 target/
 dbt_packages/
 logs/
-*.terraform/providers/registry.terraform.io
+
+*.json
