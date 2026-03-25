@@ -1,0 +1,143 @@
+[0m06:39:31.147798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000245EF1B0EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000245ECFF96D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000245EFE1DE50>]}
+
+
+============================== 06:39:31.168122 | 9a7a3bda-0eda-4877-b185-f147d5844908 ==============================
+[0m06:39:31.168122 [info ] [MainThread]: Running with dbt=1.11.6
+[0m06:39:31.169801 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\laila\\project-etl-laila\\dbt-code', 'indirect_selection': 'eager', 'invocation_command': 'dbt deps', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\laila\\project-etl-laila\\dbt-code\\logs'}
+[0m06:39:31.172636 [warn ] [MainThread]: [[33mWARNING[0m][DuplicateYAMLKeysDeprecation]: Deprecated functionality
+Duplicate key '+materialized' in "<unicode string>", line 15, column 1 in file
+`C:\Users\laila\project-etl-laila\dbt-code\dbt_project.yml`
+[0m06:39:31.173868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9a7a3bda-0eda-4877-b185-f147d5844908', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000245F1550E90>]}
+[0m06:39:31.181226 [warn ] [MainThread]: [[33mWARNING[0m][CustomTopLevelKeyDeprecation]: Deprecated functionality
+Unexpected top-level key +materialized in file
+`C:\Users\laila\project-etl-laila\dbt-code\dbt_project.yml`
+[0m06:39:31.183470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9a7a3bda-0eda-4877-b185-f147d5844908', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000245F0367020>]}
+[0m06:39:31.365454 [error] [MainThread]: Encountered an error:
+Runtime Error
+  at path []: Additional properties are not allowed ('+materialized', 'dbtetl', 'staging', 'transform' were unexpected)
+
+Error encountered in C:\Users\laila\project-etl-laila\dbt-code\dbt_project.yml
+[0m06:39:31.368143 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- DuplicateYAMLKeysDeprecation: 1 occurrence
+- CustomTopLevelKeyDeprecation: 4 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m06:39:31.372273 [debug] [MainThread]: Command `dbt deps` failed at 06:39:31.371159 after 0.77 seconds
+[0m06:39:31.373158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000245F04C0A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000245F04C0B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000245F1568C80>]}
+[0m06:39:31.374051 [debug] [MainThread]: Flushing usage events
+[0m06:39:32.091182 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:43:59.897651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239D5720EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239D35696D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239D638DE50>]}
+
+
+============================== 06:43:59.906901 | 9ea2215d-145e-4ad6-b251-4c3cf0b7d3b3 ==============================
+[0m06:43:59.906901 [info ] [MainThread]: Running with dbt=1.11.6
+[0m06:43:59.908317 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\laila\\project-etl-laila\\dbt-code', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'False', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt deps --show-all-deprecations --no-partial-parse', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\laila\\project-etl-laila\\dbt-code\\logs'}
+[0m06:43:59.910381 [warn ] [MainThread]: [[33mWARNING[0m][DuplicateYAMLKeysDeprecation]: Deprecated functionality
+Duplicate key '+materialized' in "<unicode string>", line 15, column 1 in file
+`C:\Users\laila\project-etl-laila\dbt-code\dbt_project.yml`
+[0m06:43:59.911526 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9ea2215d-145e-4ad6-b251-4c3cf0b7d3b3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239D7AC0E90>]}
+[0m06:43:59.916603 [warn ] [MainThread]: [[33mWARNING[0m][CustomTopLevelKeyDeprecation]: Deprecated functionality
+Unexpected top-level key +materialized in file
+`C:\Users\laila\project-etl-laila\dbt-code\dbt_project.yml`
+[0m06:43:59.917890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9ea2215d-145e-4ad6-b251-4c3cf0b7d3b3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239D68D7020>]}
+[0m06:43:59.918847 [warn ] [MainThread]: [[33mWARNING[0m][CustomTopLevelKeyDeprecation]: Deprecated functionality
+Unexpected top-level key dbtetl in file
+`C:\Users\laila\project-etl-laila\dbt-code\dbt_project.yml`
+[0m06:43:59.920686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9ea2215d-145e-4ad6-b251-4c3cf0b7d3b3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239D6A30650>]}
+[0m06:43:59.921443 [warn ] [MainThread]: [[33mWARNING[0m][CustomTopLevelKeyDeprecation]: Deprecated functionality
+Unexpected top-level key staging in file
+`C:\Users\laila\project-etl-laila\dbt-code\dbt_project.yml`
+[0m06:43:59.922401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9ea2215d-145e-4ad6-b251-4c3cf0b7d3b3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239D7AD8500>]}
+[0m06:43:59.923098 [warn ] [MainThread]: [[33mWARNING[0m][CustomTopLevelKeyDeprecation]: Deprecated functionality
+Unexpected top-level key transform in file
+`C:\Users\laila\project-etl-laila\dbt-code\dbt_project.yml`
+[0m06:43:59.924022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9ea2215d-145e-4ad6-b251-4c3cf0b7d3b3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239D7AF4210>]}
+[0m06:44:00.120084 [error] [MainThread]: Encountered an error:
+Runtime Error
+  at path []: Additional properties are not allowed ('+materialized', 'dbtetl', 'staging', 'transform' were unexpected)
+
+Error encountered in C:\Users\laila\project-etl-laila\dbt-code\dbt_project.yml
+[0m06:44:00.122030 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- DuplicateYAMLKeysDeprecation: 1 occurrence
+- CustomTopLevelKeyDeprecation: 4 occurrences
+[0m06:44:00.124003 [debug] [MainThread]: Command `dbt deps` failed at 06:44:00.123728 after 0.59 seconds
+[0m06:44:00.124675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239D690E000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239D688F050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239D688F1D0>]}
+[0m06:44:00.125336 [debug] [MainThread]: Flushing usage events
+[0m06:44:00.611235 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:54:51.063196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BBF4910EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BBF27596D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BBF5579E50>]}
+
+
+============================== 06:54:51.087607 | fe24a029-058d-4f4b-948c-62f552eea361 ==============================
+[0m06:54:51.087607 [info ] [MainThread]: Running with dbt=1.11.6
+[0m06:54:51.089175 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\laila\\project-etl-laila\\dbt-code', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt deps', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\laila\\project-etl-laila\\dbt-code\\logs'}
+[0m06:54:51.272942 [error] [MainThread]: Encountered an error:
+object of type 'NoneType' has no len()
+[0m06:54:51.297633 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\laila\anaconda3\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\laila\anaconda3\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\laila\anaconda3\Lib\site-packages\dbt\cli\requires.py", line 258, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\laila\anaconda3\Lib\site-packages\dbt\cli\requires.py", line 303, in wrapper
+    project = load_project(
+        flags.PROJECT_DIR,
+    ...<4 lines>...
+        require_vars=require_vars,
+    )
+  File "C:\Users\laila\anaconda3\Lib\site-packages\dbt\config\runtime.py", line 59, in load_project
+    project = Project.from_project_root(
+        project_root, project_renderer, verify_version=version_check, validate=validate
+    )
+  File "C:\Users\laila\anaconda3\Lib\site-packages\dbt\config\project.py", line 786, in from_project_root
+    return partial.render(renderer)
+           ~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\laila\anaconda3\Lib\site-packages\dbt\config\project.py", line 337, in render
+    return self.create_project(rendered)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\laila\anaconda3\Lib\site-packages\dbt\config\project.py", line 493, in create_project
+    packages: PackageConfig = package_config_from_data(
+                              ~~~~~~~~~~~~~~~~~~~~~~~~^
+        rendered.packages_dict, unrendered.packages_dict
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\laila\anaconda3\Lib\site-packages\dbt\config\project.py", line 142, in package_config_from_data
+    for i in range(0, len(packages_data.get("packages", []))):
+                      ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+
+[0m06:54:51.309076 [debug] [MainThread]: Command `dbt deps` failed at 06:54:51.304054 after 0.53 seconds
+[0m06:54:51.310388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BBF7198770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BBF715E570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BBF5AC7BD0>]}
+[0m06:54:51.311539 [debug] [MainThread]: Flushing usage events
+[0m06:54:51.984868 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:59:42.684736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029311390EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002930F2396D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029311FFDE50>]}
+
+
+============================== 06:59:42.693785 | 7a7cf5ea-7736-4ffe-a143-98ce9bf75dcd ==============================
+[0m06:59:42.693785 [info ] [MainThread]: Running with dbt=1.11.6
+[0m06:59:42.695113 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\laila\\project-etl-laila\\dbt-code', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt deps', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\laila\\project-etl-laila\\dbt-code\\logs'}
+[0m06:59:43.735478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7a7cf5ea-7736-4ffe-a143-98ce9bf75dcd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029311A055B0>]}
+[0m06:59:43.881403 [debug] [MainThread]: Set downloads directory='C:\Users\laila\AppData\Local\Temp\dbt-downloads-jrgsdws6'
+[0m06:59:43.882764 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m06:59:44.225073 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m06:59:44.227430 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m06:59:44.473653 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m06:59:44.520728 [info ] [MainThread]: Updating lock file in file path: C:\Users\laila\project-etl-laila\dbt-code/package-lock.yml
+[0m06:59:44.565210 [debug] [MainThread]: Set downloads directory='C:\Users\laila\AppData\Local\Temp\dbt-downloads-mydu4nsg'
+[0m06:59:44.575496 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m06:59:46.131244 [info ] [MainThread]: Installed from version 1.1.0
+[0m06:59:46.142206 [info ] [MainThread]: Updated version available: 1.3.3
+[0m06:59:46.143626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '7a7cf5ea-7736-4ffe-a143-98ce9bf75dcd', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029313C53130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029313C53020>]}
+[0m06:59:46.144473 [info ] [MainThread]: 
+[0m06:59:46.146276 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m06:59:46.150938 [debug] [MainThread]: Command `dbt deps` succeeded at 06:59:46.150608 after 3.76 seconds
+[0m06:59:46.153797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000293126A3E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029311F06120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002931374BD40>]}
+[0m06:59:46.154993 [debug] [MainThread]: Flushing usage events
+[0m06:59:47.037946 [debug] [MainThread]: An error was encountered while trying to flush usage events

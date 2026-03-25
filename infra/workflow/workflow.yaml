@@ -1,0 +1,16 @@
+main:
+  steps:
+    - init:
+        assign:
+          - job_name: "retail-etl-dbt-job"
+          - location: "europe-west1"
+          - project: "project-etl-laila"
+
+    - run_job:
+        call: googleapis.run.v1.namespaces.jobs.run
+        args:
+          name: ${"namespaces/" + project + "/jobs/" + job_name}
+          location: ${location}
+
+    - done:
+        return: "dbt job executed"

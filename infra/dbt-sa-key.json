@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "project-etl-laila",
+  "private_key_id": "145ad3d0742842d716b984d0d12a40b52484851c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDJoAdflFOKxViv\njE5RBmjbXYCxQRS0DVl6t+99NKtwS290LdI37qRTCVbju6YefCHap74KCwBtReai\n4cr+eD1JwgHqr/L38qBLEVZD0FSxrm/jYu1Z9XXwUXt8rWFigqmZLLVuCHbZO/Em\nhVUD89hpU4vrbVb6ghwRF7J+fz2WcrcQfdHqXKmJNESepaMUQOChE3Ra8DJ+R0Sv\n0RfShyRoTDqtWTx3s2SU8K0JBUFup/b29hUxJrra+LT5kX4T9gT5+UkUWB359jwP\nQz/A5a1V+XHU/QR0WX9rWEaufq7lW5INH/h0kjSzuG8kaDOt3tu0hlzCqW1DdVDn\njCBZG6lRAgMBAAECggEAXBeaBpALMIE/Jr+hLeUNk9S7aTrep/bI/gJxgvDBtYLf\nH2OmdyGrMLo9U7tr/tSX6fVgGdo4kbCxzYfwXhaxd7UDhxxij9nkWSVMD6Fibd3N\nAUE4RDSXb/LnwmS27HXd3TbMj7uR/VshpISV9j40hLdCW4APkFBJXY1DW//mM4bV\nxn5oiNZEgDc20EWsw5Uqy9Np0vD9XlWfdRCmtYBTYE/k4/vvUsQOx/JxqC10dtOJ\nKjB1yTk0GPJ6Gvfzu/XGGQX3nRDehDu/Y3QeTgRWt59mZcXVGOl6PKLw8YfC7GxP\nN081eNDXwUNNa2MegA7MU21dkerCcbtsBTxbk5p9WQKBgQD3bHbIPkmN83YvU5H+\nH6WgYVVbxrh08RGwk78qjK00Tju8jiivmvh1lpHPC+h/QpeqTX2q/3dE1VBHAV5Q\nxhX1CNcYqQ/4jlnIsWZb+z8qlJ32iGKkP/rK5sz8wpZCCMP36dpqx32KEH2mYtTr\nJKsW9UTwVO8oh+0DDLSh/4FcSwKBgQDQnSrG50hpEDHRs5RuS+hJFVs4FQGRh+pj\nzR2ca2dMInOnMLbpEMRLImp7/i4uqYpw+g1Kc4Lo/vK4vLXu7PMMLBML4B381uvV\nvYOon89q/22GyIWNbAW8Yn8Y1AHWnbBsa9dyRlmBp6IsgKSPRO2I9zTThbjc416W\nv2ucHKAXUwKBgQCY8ESkFkxlID7HlkLB8FHyxvd6WWWfc3vZyBn8dSSDFnC6Zq0j\njwlRtha/Ar9eGo2hSXEKiArzU1/h5CimiSr9Yc+DgM1MeMFq2q1I4g7zhRX3U+qV\nWK7vSKcg/i7e9ogb8EOAiXtCIltow+KUzv+qm0VXwUhrp0mL/wiQsl0F7QKBgEdU\nxlC2uqq6D97dYa6JJAcBV2yIuj2R1NKFS0+15d9BlHwhixmMUyJBxVlaY14vOJhC\n2BKSBrw2mLYUSL1GpiCOXYDdBEP1FTTDlWYuJtU2O7QvkoL14cw1fbH2pB5HUxDv\nmv6HEYnk0O4YmqwmbHY92QFOoxRcZnZzQ49gtljjAoGBAMhTHH6pL6pPJTH6bHWR\nSCtWAgWKB7kHPCuaLj136ScM8Ep+ue/4O0fFNLFEkgVB8+88qmRGBb5yeK4q5vLK\nC7OZ0u9uywDuumzc0cWllIKtgk8o1NUttkQ7aC2uJsTeG0sBm7Zmm9bhHwqVBJvo\nrDmGYetyW6BjlhhYclrq7krn\n-----END PRIVATE KEY-----\n",
+  "client_email": "retail-etl-sa@project-etl-laila.iam.gserviceaccount.com",
+  "client_id": "101574082588897152179",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/retail-etl-sa%40project-etl-laila.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

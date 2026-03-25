@@ -1,0 +1,25 @@
+dbtetl:
+  target: dev_local
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: project-etl-laila
+      dataset: lailadata
+      threads: 1
+      keyfile: /secrets/dbt-keyfile
+      location: EU
+      priority: interactive
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+
+    dev_local:
+      type: bigquery
+      method: oauth
+      project: project-etl-laila
+      dataset: lailadata
+      threads: 1
+      location: EU
+      priority: interactive
+      job_execution_timeout_seconds: 300
+      job_retries: 1

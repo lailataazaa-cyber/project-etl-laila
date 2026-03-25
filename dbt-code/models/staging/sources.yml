@@ -1,0 +1,10 @@
+# sources.yml
+version: 2
+
+sources:
+  - name: lailadata
+    database: project-etl-laila # Put the project id!
+
+    tables:
+      - name: raw_invoice
+      - name: raw_country
