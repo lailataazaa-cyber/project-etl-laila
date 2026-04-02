@@ -1,9 +1,9 @@
 dbtetl:
-  target: dev_local
+  target:  dev
   outputs:
     dev:
       type: bigquery
-      method: service-account
+      method: oauth
       project: project-etl-laila
       dataset: lailadata
       threads: 1

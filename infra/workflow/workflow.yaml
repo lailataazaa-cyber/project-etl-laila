@@ -1,16 +1,47 @@
 main:
+  params: [event]
   steps:
     - init:
         assign:
-          - job_name: "retail-etl-dbt-job"
-          - location: "europe-west1"
           - project: "project-etl-laila"
+          - location: "europe-west1"
+          - bucket: ${event.data.bucket}
+          - file_name: ${event.data.name}
+          - gcs_uri: ${"gs://" + bucket + "/" + file_name}
 
-    - run_job:
+    - load_to_bigquery:
+        call: http.post
+        args:
+          url: ${"https://bigquery.googleapis.com/bigquery/v2/projects/" + project + "/jobs"}
+          auth:
+            type: OAuth2
+          body:
+            configuration:
+              load:
+                sourceUris:
+                  - ${gcs_uri}
+                destinationTable:
+                  projectId: ${project}
+                  datasetId: "lailadata"
+                  tableId: ${if(file_name == "raw_invoice.csv", "raw_invoice", "raw_country")}
+                sourceFormat: "CSV"
+                skipLeadingRows: 1
+                writeDisposition: "WRITE_TRUNCATE"
+                autodetect: true
+        result: load_result
+
+    - run_etl_job:
         call: googleapis.run.v1.namespaces.jobs.run
         args:
-          name: ${"namespaces/" + project + "/jobs/" + job_name}
+          name: ${"namespaces/" + project + "/jobs/retail-etl-dbt-job"}
           location: ${location}
+          body:
+            overrides:
+              containerOverrides:
+                - env:
+                    - name: GCS_FILE_PATH
+                      value: ${gcs_uri}
+        result: job_result
 
     - done:
-        return: "dbt job executed"
+        return: ${"Pipeline termine pour => " + gcs_uri}

@@ -152,7 +152,6 @@ resource "google_project_iam_member" "eventarc_admin" {
 
 
 
-# terraform to create Cloud Run Job to execute dbt with BigQuery
 resource "google_cloud_run_v2_job" "dbt" {
   name     = var.dbt_job_name
   location = var.region
@@ -165,7 +164,14 @@ resource "google_cloud_run_v2_job" "dbt" {
 
       containers {
         image = var.dbt_image
-        args  = ["run"]
+        env {
+          name  = "BQ_DATASET"
+          value = "lailadata"
+        }
+        env {
+          name  = "BQ_PROJECT"
+          value = var.project_id
+        }
       }
     }
   }
@@ -205,22 +211,22 @@ resource "google_eventarc_trigger" "trigger" {
 }
 
 # terraform to create Cloud Build trigger for all git branches
-resource "google_cloudbuild_trigger" "terraform_all_branches" {
-  name        = var.cloudbuild_trigger_name
-  description = "Run Terraform pipeline on every branch push"
+#resource "google_cloudbuild_trigger" "terraform_all_branches" {
+  #name        = var.cloudbuild_trigger_name
+  #description = "Run Terraform pipeline on every branch push"
 
-  github {
-    owner = var.github_owner
-    name  = var.github_repo_name
-    push {
-      branch = var.cloudbuild_trigger_branch_regex
-    }
-  }
+ # github {
+    #owner = var.github_owner
+    #name  = var.github_repo_name
+    #push {
+      #branch = var.cloudbuild_trigger_branch_regex
+    #}
+ # }
 
-  filename = "cloudbuild.yaml"
+  #filename = "cloudbuild.yaml"
 
-  substitutions = {
-    _TF_STATE_BUCKET = var.tf_state_bucket
-    _TF_STATE_PREFIX = var.tf_state_prefix
-  }
-}
+  #substitutions = {
+   # _TF_STATE_BUCKET = var.tf_state_bucket
+   # _TF_STATE_PREFIX = var.tf_state_prefix
+  #}
+#}

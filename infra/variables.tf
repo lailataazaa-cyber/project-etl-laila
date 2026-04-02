@@ -1,7 +1,7 @@
 
 variable "project_id" {
   type        = string
-  default     = "retail-etl"
+  default     = "project-etl-laila"
   description = "project-etl-laila"
 }
 
@@ -19,10 +19,9 @@ variable "dbt_job_name" {
 
 variable "dbt_image" {
   type        = string
-  default     = "docker.io/dbtlabs/dbt-bigquery:1.8.2"
+  default     = "europe-west1-docker.pkg.dev/project-etl-laila/dbt-images/retail-etl-dbt-job:latest"
   description = "Container image used by Cloud Run Job to run dbt with BigQuery"
 }
-
 
 variable "github_owner" {
   type        = string

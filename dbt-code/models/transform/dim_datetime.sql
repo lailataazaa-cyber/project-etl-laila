@@ -1,14 +1,7 @@
--- Time dimension for temporal analysis
 WITH datetime_cte AS (
   SELECT DISTINCT
-    InvoiceDate AS datetime_id,
-    CASE
-      WHEN LENGTH(InvoiceDate) = 16 THEN
-        PARSE_DATETIME('%m/%d/%Y %H:%M', InvoiceDate)
-      WHEN LENGTH(InvoiceDate) <= 14 THEN
-        PARSE_DATETIME('%m/%d/%y %H:%M', InvoiceDate)
-      ELSE NULL
-    END AS date_part,
+    CAST(InvoiceDate AS STRING) AS datetime_id,
+    CAST(InvoiceDate AS DATETIME) AS date_part
   FROM {{ source('lailadata', 'raw_invoice') }}
   WHERE InvoiceDate IS NOT NULL
 )
